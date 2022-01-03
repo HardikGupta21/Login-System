@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login/SignUp</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="image">
+      <img src="images/i1.png" alt="">
+    </div>
+    <div class="tabs">
+      <div class="tab-header">
+        <div data-tab-target="#login" class="active tab" onclick="animation()">
+          <h2>Login</h2>
+        </div>
+        <div data-tab-target="#signup" class="tab" onclick="animation()">
+          <h2>SignUp</h2>
+        </div>
+      </div>
+      <div class="tab-indicator" data-tab-indicator></div>
+      <div class="tab-body" id="tab-bd">
+
+        <!-- LOGIN -->
+
+        <div id="login" data-tab-content class="active">
+          <form id="lg-form" name="f-login" action="" class="login-form">
+            <div id="user" class="input-field">
+              <input id="username" name="fl-name" type="text" placeholder="Your Name" autocomplete="off" required>
+              <i class="fas fa-user lg-ic"></i>
+            </div>
+            <div id="email" class="input-field">
+              <input id="email-lg" name="fl-email" type="Email" placeholder="Email" autocomplete="off" required>
+              <i class="fa fa-envelope lg-ic" aria-hidden="true"></i>
+            </div>
+            <div id="pass" class="input-field">
+              <input id="password" name="fl-password" type="password" placeholder="Password" autocomplete="off" required>
+              <i class="fa fa-lock lg-ic" aria-hidden="true"></i>
+            </div>
+            <div class="button-social">
+              <input id="lg-btn" name="fl-btn" type="submit" value="Login" class="btn">
+              <p class="social-text">Or Login With</p>
+              <div class="social-media">
+                <a href="" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="social-icon">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="" class="social-icon">
+                  <i class="fab fa-google-plus"></i>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- SIGN UP -->
+
+        <div id="signup" data-tab-content>
+          <form id="sg-form" name="f-signup" action="#login" class="signup-form" onsubmit="validate();" method="post">
+            <div class="input-field sg-input-field">
+              <input id="susername" name="fs-name" type="text" placeholder="Your Name" autocomplete="off">
+              <i class="far fa-check-circle sc"></i>
+              <i class="fas fa-user sg-ic"></i>
+              <i class="far fa-exclamation-circle er" title="name is to short"></i>
+            </div>
+            <div class="input-field sg-input-field">
+              <input id="semail" name="fs-email" type="Email" placeholder="Email" autocomplete="off">
+              <i class="far fa-check-circle sc"></i>
+              <i class="fa fa-envelope sg-ic" aria-hidden="true"></i>
+              <i class="far fa-exclamation-circle er"></i>
+            </div>
+            <div class="input-field sg-input-field">
+              <input id="spassword" name="fs-pass" type="password" placeholder="Password" autocomplete="off">
+              <i class="far fa-check-circle sc"></i>
+              <i class="fa fa-lock sg-ic" aria-hidden="true"></i>
+              <i class="far fa-exclamation-circle er"></i>
+            </div>
+            <div class="input-field sg-input-field">
+              <input id="scpassword" name="fs-cpass" type="password" placeholder="Confirm Password"
+                autocomplete="off">
+              <i class="far fa-check-circle sc"></i>
+              <i class="fa fa-lock sg-ic" aria-hidden="true"></i>
+              <i class="far fa-exclamation-circle er"></i>
+            </div>
+
+            <div class="button-social">
+              <input id="sg-btn" name="fs-btn" type="submit" value="SignUp" class="btn">
+              <p class="social-text">Or Login With</p>
+              <div class="social-media" id="social-med">
+                <a href="" class="social-icon">
+                  <i class="fab fa-facebook"></i>
+                </a>
+                <a href="" class="social-icon">
+                  <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="" class="social-icon">
+                  <i class="fab fa-google-plus"></i>
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
